@@ -25,7 +25,7 @@ public class MyInfoSteps {
 	}
 
 	@When("user updates personal details")
-	public void user_updates_personal_details() {
+	public void user_updates_personal_details() throws InterruptedException {
 	    // Write code here that turns the phrase above into concrete actions
 //	    throw new io.cucumber.java.PendingException();
 		myinfo.updateFirstname("sandy");

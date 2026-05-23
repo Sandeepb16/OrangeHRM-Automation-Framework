@@ -10,8 +10,8 @@ import io.cucumber.testng.CucumberOptions;
 		"pretty",
 		"html:target/cucumber-reports.html"
 		},
-		monochrome = true
-//		tags = "@Logout"
+		monochrome = true,
+		tags = "@MyInfo"
 		
 		
 		)

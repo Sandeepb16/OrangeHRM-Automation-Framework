@@ -50,9 +50,9 @@ public class MyInfoPage {
 		return wait.waitForElement(myInfoHeader).isDisplayed();
 	}
 	
-	public void updateFirstname(String fname) {
+	public void updateFirstname(String fname) throws InterruptedException {
 
-
+		Thread.sleep(2000);
 	    WebElement element = wait.waitForElement(firstName);
 	    element.click();
 	    element.sendKeys(Keys.CONTROL + "a");
@@ -62,26 +62,28 @@ public class MyInfoPage {
 		
 	}
 	
-    public void updateMiddleName(String mname) {
+    public void updateMiddleName(String mname) throws InterruptedException {
 //        wait.waitForElement(middleName).clear();
 //        wait.waitForElement(middleName).sendKeys(mname);
+    	Thread.sleep(2000);
         WebElement element = wait.waitForElement(middleName);
 	    element.click();
 	    element.sendKeys(Keys.CONTROL + "a");
 	    element.sendKeys(Keys.DELETE);
 	    element.sendKeys(mname);
-	    element.sendKeys(mname);
+//	    element.sendKeys(mname);
     }
 
-    public void updateLastName(String lname) {
+    public void updateLastName(String lname) throws InterruptedException {
 //        wait.waitForElement(lastName).clear();
 //        wait.waitForElement(lastName).sendKeys(lname);
+    	Thread.sleep(2000);
     	WebElement element = wait.waitForElement(lastName);
 	    element.click();
 	    element.sendKeys(Keys.CONTROL + "a");
 	    element.sendKeys(Keys.DELETE);
 	    element.sendKeys(lname);
-	    element.sendKeys(lname);
+//	    element.sendKeys(lname);
     }
     
     public void updateEmployeeId(String empid) {
@@ -174,22 +176,6 @@ public class MyInfoPage {
     	return wait.waitForElement(firstName).getAttribute("value");
     }
     
-//    public String getCity() {
-////    	return wait.waitForElement(city).getAttribute("value");
-//        try {
-//            Thread.sleep(3000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-//
-//        WebElement cityField = wait.waitForElement(city);
-//
-//        String cityValue = cityField.getAttribute("value").trim();
-//
-//        System.out.println("Actual City Value: " + cityValue);
-//
-//        return cityValue;
-//    	
-//    }
+
 
 }
