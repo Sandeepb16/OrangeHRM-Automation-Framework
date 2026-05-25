@@ -58,32 +58,30 @@ public class MyInfoPage {
 	    element.sendKeys(Keys.CONTROL + "a");
 	    element.sendKeys(Keys.DELETE);
 	    element.sendKeys(fname);
-//	    element.sendKeys(fname);
+
 		
 	}
 	
     public void updateMiddleName(String mname) throws InterruptedException {
-//        wait.waitForElement(middleName).clear();
-//        wait.waitForElement(middleName).sendKeys(mname);
+
     	Thread.sleep(2000);
         WebElement element = wait.waitForElement(middleName);
 	    element.click();
 	    element.sendKeys(Keys.CONTROL + "a");
 	    element.sendKeys(Keys.DELETE);
 	    element.sendKeys(mname);
-//	    element.sendKeys(mname);
+
     }
 
     public void updateLastName(String lname) throws InterruptedException {
-//        wait.waitForElement(lastName).clear();
-//        wait.waitForElement(lastName).sendKeys(lname);
+
     	Thread.sleep(2000);
     	WebElement element = wait.waitForElement(lastName);
 	    element.click();
 	    element.sendKeys(Keys.CONTROL + "a");
 	    element.sendKeys(Keys.DELETE);
 	    element.sendKeys(lname);
-//	    element.sendKeys(lname);
+
     }
     
     public void updateEmployeeId(String empid) {
@@ -93,7 +91,7 @@ public class MyInfoPage {
 
     
     public void clickPersonalSaveBtn() {
-//    	wait.waitForClickable(personalSaveBtn).click();
+
     	 WebElement saveBtn = wait.waitForClickable(personalSaveBtn);
     	    JavascriptExecutor js = (JavascriptExecutor) driver;
     	    js.executeScript("arguments[0].scrollIntoView(true);", saveBtn);
@@ -107,8 +105,7 @@ public class MyInfoPage {
     }
     
     public void cliclContactDetailsTab() {
-//    	wait.waitForElement(contackDetailsTab)
-//    	wait.waitForElement(contackDetailsTab).click();
+
     	WebElement tab = wait.waitForClickable(contackDetailsTab);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", tab);
@@ -157,7 +154,6 @@ public class MyInfoPage {
     
     
     public void clickContactSaveBtn() {
-//    	wait.waitForElement(contactSaveBtn).click();
     	WebElement saveBtn = wait.waitForClickable(contactSaveBtn);
 
         JavascriptExecutor js = (JavascriptExecutor) driver;

@@ -40,7 +40,6 @@ public class AdminPage {
 	}
 	
 	public void clickAdminMenu() {
-//		driver.findElement(adminMenu).click();
 		wait.waitForElement(adminMenu).click();
 	}
 	
@@ -49,8 +48,8 @@ public class AdminPage {
 		return wait.waitForElement(adminHeader).isDisplayed();
 	}
 	
-	public void searchUser(String user) {
-//		driver.findElement(usernameSearch).sendKeys(user);
+	public void searchUser(String user) throws InterruptedException {
+		Thread.sleep(2000);
 		wait.waitForElement(usernameSearch).sendKeys(user);
 	}
 	
@@ -60,7 +59,6 @@ public class AdminPage {
 	}
 	
 	public void clickAddBtn() {
-//		driver.findElement(addBtn).click();
 		wait.waitForElement(addBtn).click();
 	}
 	
@@ -94,22 +92,18 @@ public class AdminPage {
 	}
 	
 	public void clickSaveBtn() {
-//		driver.findElement(saveBtn).click();
 		wait.waitForElement(saveBtn).click();
 	}
 	
 	public void clickEditBtn() {
-//		driver.findElement(editBtn).click();
 		wait.waitForElement(editBtn).click();
 	}
 	
 	public void clickDeleteBtn() {
-//		driver.findElement(deleteBtn).click();
 		wait.waitForElement(deleteBtn).click();
 	}
 	
 	public void confirmDeletBtn() {
-//		driver.findElement(deleteConfirm).click();
 		wait.waitForElement(deleteConfirm).click();
 	}
 	

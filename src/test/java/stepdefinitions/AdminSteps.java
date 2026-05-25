@@ -36,7 +36,7 @@ public class AdminSteps {
 	}
 
 	@When("user searches username {string}")
-	public void user_searches_username(String string) {
+	public void user_searches_username(String string) throws InterruptedException {
 	    // Write code here that turns the phrase above into concrete actions
 //	    throw new io.cucumber.java.PendingException();
 		admin.searchUser(string);
@@ -51,23 +51,20 @@ public class AdminSteps {
 
 	@Then("matching user records should display")
 	public void matching_user_records_should_display() {
-	    // Write code here that turns the phrase above into concrete actions
-//	    throw new io.cucumber.java.PendingException();
+	    
 		System.out.println("user displayed");
 		
 	}
 
 	@When("user clicks add button")
 	public void user_clicks_add_button() {
-	    // Write code here that turns the phrase above into concrete actions
-//	    throw new io.cucumber.java.PendingException();
+	    
 		admin.clickAddBtn();
 	}
 
 	@When("user enters new user details")
 	public void user_enters_new_user_details() {
-	    // Write code here that turns the phrase above into concrete actions
-//	    throw new io.cucumber.java.PendingException();
+	    
 		admin.selectUserRole("ESS");
 		admin.enterEmployeeName("sandeep");
 		admin.selectStatus("Enabled");
@@ -78,44 +75,38 @@ public class AdminSteps {
 
 	@When("user clicks save button")
 	public void user_clicks_save_button() {
-	    // Write code here that turns the phrase above into concrete actions
-//	    throw new io.cucumber.java.PendingException();
+	    
 		admin.clickSaveBtn();
 	}
 
 	@Then("user should be added successfully")
 	public void user_should_be_added_successfully() {
-	    // Write code here that turns the phrase above into concrete actions
-//	    throw new io.cucumber.java.PendingException();
+	  
 		System.out.println("user added succfully");
 	}
 
 	@When("user edits existing user")
 	public void user_edits_existing_user() {
-	    // Write code here that turns the phrase above into concrete actions
-//	    throw new io.cucumber.java.PendingException();
+	   
 		admin.clickEditBtn();
 	}
 
 	@Then("user details should update successfully")
 	public void user_details_should_update_successfully() {
-	    // Write code here that turns the phrase above into concrete actions
-//	    throw new io.cucumber.java.PendingException();
+	  
 		System.out.println("updated successfuly");
 	}
 
 	@When("user deletes existing user")
 	public void user_deletes_existing_user() {
-	    // Write code here that turns the phrase above into concrete actions
-//	    throw new io.cucumber.java.PendingException();
+	    
 		admin.clickDeleteBtn();
 		admin.confirmDeletBtn();
 	}
 
 	@Then("user should be deleted successfully")
 	public void user_should_be_deleted_successfully() {
-	    // Write code here that turns the phrase above into concrete actions
-//	    throw new io.cucumber.java.PendingException();
+	   
 		System.out.println("delete successful");
 	}
 
